@@ -1,0 +1,59 @@
+@mixin but($width){
+  width: $width;
+  height: 3em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  background: white;
+  color: #22BECE;
+  border: 1px solid #22BECE;
+  border-radius:  0.5em;
+  outline: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  * {
+    font-size: 18px;
+  }
+  h1{
+    font-size: 3em;
+    color: #22BECE;
+  }
+  td{
+    min-width: 200px;
+  }
+  button{
+    @include but(10 em);
+    margin: 1em;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: #22BECE;
+    color: white;
+    transition: background-color 0.5s linear, color 0.5s linear;
+  }
+  button:not(:hover) {
+    transition: 3s;
+  }
+  .main{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    display: flex;
+  }
+  .tree{
+    border-right: 1px solid gray;
+    width: 33.3333%;
+    padding: 2em;
+  }
+  .tableBox{
+    width: 66.6666%;
+    padding: 0 2em 2em 2em;
+  }
+  #addButton, #addChieldButton, #remButton {
+    width: 120px;
+  }
+  #addString, #remString {
+    width: 140px;
+  }
+}

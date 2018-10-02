@@ -1,0 +1,32 @@
+html
+    head
+        meta(charset="utf-8")
+        title= "Test task"
+        link(rel="stylesheet", href="./dist/style.min.css")
+        link(rel="stylesheet", href="./dist/handsontable.full.min.css")
+        link(rel="stylesheet", href="./styles/style.css")
+    body
+        .main
+            .tree(id="treeDiv")
+                div(id="jstree")
+                    ul
+                        li Root level1
+                            ul
+                                li Level 1
+                                li Level 2
+                        li Root node 2
+                button(id="addButton", onclick="parent_create()") Add parrent
+                button(id="addChieldButton", onclick="child_create()") Add
+                button(id="remButton", onclick="level_remove()") Delete
+            .tableBox
+                h1 ТАБЛИЦА
+                .exelTable(id="example")
+                button(id="addString") Add string
+                button(id="remString") Remove string
+
+
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js")
+        script(src="./dist/jstree.min.js")
+        script(src="./dist/handsontable.full.min.js")
+        script(src="./assets/js/all.js")
